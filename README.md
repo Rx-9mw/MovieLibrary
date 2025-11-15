@@ -13,4 +13,4 @@ git clone https://github.com/Rx-9mw/MovieLibrary.git
 ```sh
 dotnet run
 ```
-5. Po kliknięciu w wygenerowany link http://localhost:XXXX zostaniemy przekierowani do strony biblioteki filmów
+5. Po kliknięciu w wygenerowany w terminalu link eg. http://localhost:XXXX , zostaniemy przekierowani do strony biblioteki filmów
