@@ -1,0 +1,33 @@
+@model AplikacjaMVC.Models.Movie
+
+<h2>@(ViewBag.Action == "Add" ? "Dodaj nowy film" : "Edytuj film")</h2>
+
+@Html.ValidationSummary()
+
+<form method="post" action="/Movie/@ViewBag.Action">
+    @if (ViewBag.Action == "Edit")
+    {
+        <input type="hidden" name="Id" value="@Model.Id" />
+    }
+
+    <div class="form-group">
+        <label>Tytuł:</label><br />
+        <input class="form-control" type="text" name="Title" value="@Model.Title" required />
+    </div>
+
+    <div class="form-group">
+        <label>Rok:</label><br />
+        <input class="form-control" type="number" name="Year" value="@Model.Year" required />
+    </div>
+
+    <div class="form-group">
+        <label>Gatunek:</label><br />
+        <input class="form-control" type="text" name="Genre" value="@Model.Genre" required />
+    </div>
+
+    <br />
+    <button class="btn btn-primary" type="submit">@(ViewBag.Action == "Add" ? "Dodaj" : "Zapisz")</button>
+</form>
+
+<br />
+<a href="/?view=list">Powrót do listy</a>
